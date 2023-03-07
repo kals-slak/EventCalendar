@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="h-screen w-full lg:flex grid lg:justify-center lg:items-center">
+        <div id="sec1" class="h-full w-full lg:w-1/2 bg-slate-400 p-5"> 
+            <div id="header" class="flex justify-center space-x-4 my-6 items-center">
+                <button onclick="decMonth()" class="w-10 h-10 hover:rounded-full hover:bg-white"><</button>
+                <div id="month-year" class="text-white text-center w-2/12 align-middle">Janunary 2023</div>
+                <button onclick="incMonth()" class="w-10 h-10 hover:rounded-full hover:bg-white">></button>
+            </div>
+            <div id="days" class="flex justify-center lg:grid lg:grid-cols-7 lg:gap-2 lg:w-full">
+                <div class="w-20 m-2 text-center">Sun</div>
+                <div class="w-20 m-2 text-center">Mon</div>
+                <div class="w-20 m-2 text-center">Tue</div>
+                <div class="w-20 m-2 text-center">Wed</div>
+                <div class="w-20 m-2 text-center">Thu</div>
+                <div class="w-20 m-2 text-center">Fri</div>
+                <div class="w-20 m-2 text-center">Sat</div>
+            </div>
+            <div id="calendar" class="grid grid-cols-7 gap-2 w-full" ></div>
+        </div>
+        <div id="sec2" class=" w-full lg:w-1/4 h-full md:h-3/4 bg-orange-400 flex justify-between flex-col">
+            <div class="flex justify-start flex-col">
+                <h1 class="text-center text-3xl p-5">Events</h1>
+                <h1 id="message" class="text-center text-xl p-3"></h1>
+                <div id="EventsList"></div>
+            </div>
+            <div class="flex justify-center">
+                <!-- <button class="text-2xl w-16 h-16 hover:m-7 rounded-full bg-white text-center m-5">+</button> -->
+                <input class="w-3/4 p-2 m-2" id="inputEvent" type="text">
+                <button class="w-1/4 p-2 bg-sky-500 m-2 rounded-sm text-white text-lg" onclick="addEvent()">Add</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
